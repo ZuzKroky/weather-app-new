@@ -1,0 +1,60 @@
+h1,
+h4 {
+  font-family: "Bodoni Moda", serif;
+  border-radius: 15px;
+}
+h1 {
+  padding-top: 20px;
+  text-align: center;
+}
+
+h4 {
+  background-color: #4bcfff;
+  font-size: 30px;
+  margin-right: 350px;
+}
+ul {
+  list-style: none;
+  font-family: "Gentium Basic", serif;
+}
+
+img {
+  width: 150px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 30px auto;
+  background-color: #7cdcff;
+  border-radius: 20px;
+  border: 1px solid;
+}
+
+.btn {
+  border-radius: 15px;
+}
+
+.description {
+  font-family: "Gentium Basic", serif;
+  margin-top: 50px;
+}
+.temperature {
+  font-size: 40px;
+  font-weight: 600;
+}
+.details {
+  background-color: #ffd205;
+  font-size: 20px;
+  border-radius: 15px;
+  margin-left: 400px;
+  margin-top: -80px;
+}
+.col-2 {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.link {
+  text-align: center;
+  display: block;
+}
