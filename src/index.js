@@ -58,6 +58,7 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+
 }
 
 function searchCity(event) {
@@ -87,3 +88,8 @@ function getCurrentLocation(event) {
 }
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+function displayIconTemperature(response){
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
+ }
