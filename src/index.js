@@ -80,3 +80,15 @@ function displayIconTemperature(response){
    axios.get(apiUrl).then(displayIconTemperature);
 
 }
+
+
+function displayFahrenheitTemperature(event){
+  event.preventDefault();
+  let fahrenheitTemperature = (14 * 9)/ 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
