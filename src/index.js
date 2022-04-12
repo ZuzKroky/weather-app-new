@@ -26,9 +26,9 @@ function search(event) {
   let h4 = document.querySelector("h4");
   h4.innerHTML = `${searchInput.value}`;
 }
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
-
 
 function displayWeatherCondition(response) {
   console.log(response.data);
@@ -42,18 +42,21 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
-
+  
+    celsiusTemperature = response.data.main.temp;
 }
 
 function searchCity(event) {
   event.preventDefault();
-  let apiKey = "f7fa5fb6284592ffde91f927588e92e2";
   let searchInput = document.querySelector("#search-text-input");
   let city = searchInput.value;
   let units = "metric";
+  let apiKey = "f7fa5fb6284592ffde91f927588e92e2";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
+  axios.get(apiUrl).then(displayIconTemperature);
   axios.get(apiUrl).then(displayWeatherCondition);
+
 }
 
 let searchForm = document.querySelector("#search-form");
@@ -70,6 +73,7 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
+
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
@@ -81,14 +85,16 @@ function displayIconTemperature(response){
 
 }
 
-
 function displayFahrenheitTemperature(event){
   event.preventDefault();
-  let fahrenheitTemperature = (14 * 9)/ 5 + 32;
   let temperatureElement = document.querySelector("#temperature");
+  let fahrenheitTemperature = (celsiusTemperature * 9)/ 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
+let celsiusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+search("New York");
