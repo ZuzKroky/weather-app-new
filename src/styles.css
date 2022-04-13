@@ -46,9 +46,14 @@ ul {
   margin-left: 400px;
   margin-top: -80px;
 }
-.col-2 {
+.weather-forecast {
   margin-left: 20px;
   margin-bottom: 20px;
+  text-align: center;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
 }
 
 .link {
