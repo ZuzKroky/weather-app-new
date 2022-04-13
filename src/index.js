@@ -84,17 +84,3 @@ function displayIconTemperature(response){
    axios.get(apiUrl).then(displayIconTemperature);
 
 }
-
-function displayFahrenheitTemperature(event){
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  let fahrenheitTemperature = (celsiusTemperature * 9)/ 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-let celsiusTemperature = null;
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-search("New York");
