@@ -19,7 +19,8 @@ debugger;
 let day = days[now.getDay()];
 currenttimeday.innerHTML = `${day} ${hours}:${minutes}`;
 
-function displayForecast(){
+function displayForecast(response){
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Thu", "Fri", "Sat", "Sun"];
@@ -49,6 +50,14 @@ function displayForecast(){
   console.log(forecastHTML);
 }
 
+function getForecast(coordinates){
+console.log(coordinates);
+let apiKey = "f7fa5fb6284592ffde91f927588e92e2";
+let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+console.log(apiUrl);
+axios.get(apiUrl).then(displayForecast);
+}
+
 
 function search(event) {
   event.preventDefault();
@@ -75,6 +84,8 @@ function displayWeatherCondition(response) {
     response.data.weather[0].main;
   
     celsiusTemperature = response.data.main.temp;
+
+  getForecast(response.data.coord);
 }
 
 function searchCity(event) {
@@ -116,4 +127,4 @@ function displayIconTemperature(response){
 
 }
 
-displayForecast();
+//displayForecast();
