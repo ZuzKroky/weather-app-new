@@ -93,7 +93,6 @@ function displayWeatherCondition(response) {
   
     celsiusTemperature = response.data.main.temp;
 
-  getForecast(response.data.coord);
 }
 
 function searchCity(event) {
@@ -131,7 +130,8 @@ function displayIconTemperature(response){
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
-   axios.get(apiUrl).then(displayIconTemperature);
+
+    getForecast(response.data.coord);
 
 }
 
