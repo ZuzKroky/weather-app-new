@@ -9,7 +9,7 @@ h1 {
 }
 
 h4 {
-  background-color: #4bcfff;
+  background-color: #f774aa;
   font-size: 30px;
   margin-right: 350px;
 }
@@ -20,20 +20,31 @@ ul {
 
 .container {
   max-width: 700px;
-  background-color: #ffd205;
   margin: 30px auto;
-  background-color: #7cdcff;
+  background-color: #47cae8;
   border-radius: 20px;
   border: 1px solid;
 }
 
+.line {
+  background: #f9f7fe;
+  border: none;
+  padding: 15px 20px;
+  display: inline-block;
+  border-radius: 20px;
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  height: 40px;
+  line-height: 20px;
+}
+
 .btn {
-  border-radius: 15px;
+  border-radius: 30px;
 }
 
 .description {
   font-family: "Gentium Basic", serif;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 .temperature {
   font-size: 40px;
@@ -41,7 +52,7 @@ ul {
 }
 
 .details {
-  background-color: #ffd205;
+  background-color: #f774aa;
   font-size: 20px;
   border-radius: 15px;
   margin-left: 400px;
