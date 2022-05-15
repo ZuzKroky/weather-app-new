@@ -1,7 +1,7 @@
 h1,
 h4 {
   font-family: "Bodoni Moda", serif;
-  border-radius: 30px;
+  border-radius: 15px;
 }
 h1 {
   padding-top: 20px;
@@ -28,7 +28,7 @@ ul {
 }
 
 .dayandtime {
-  font-size: larger;
+  font-size: x-large;
 }
 
 .line {
