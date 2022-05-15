@@ -29,6 +29,11 @@ ul {
 
 .dayandtime {
   font-size: x-large;
+  text-align: center;
+  background-color: #15f2cd;
+  border-radius: 15px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .line {
@@ -51,6 +56,25 @@ ul {
   font-family: "Gentium Basic", serif;
   margin-top: 50px;
 }
+
+.btn-primary {
+  background-color: #68e1fd;
+  color: black;
+}
+
+.btn-primary:hover {
+  background: #15f2cd;
+}
+
+.btn-success {
+  background-color: #15f2cd;
+  color: black;
+}
+
+.btn-success:hover {
+  background: #68e1fd;
+}
+
 .temperature {
   font-size: 40px;
   font-weight: 600;
