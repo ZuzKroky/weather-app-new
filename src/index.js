@@ -17,7 +17,7 @@ let days = [
 debugger;
 
 let day = days[now.getDay()];
-currenttimeday.innerHTML = `${day} ${hours}:${minutes}`;
+currenttimeday.innerHTML = `${day}, ${hours}:${minutes}`;
 
 function formatDay(timestamp){
   let date = new Date(timestamp * 1000);
