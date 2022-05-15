@@ -44,7 +44,7 @@ ul {
 
 .description {
   font-family: "Gentium Basic", serif;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .temperature {
   font-size: 40px;
@@ -64,8 +64,21 @@ ul {
   text-align: center;
 }
 
+.weather-forecast-date {
+  font-family: "Bodoni Moda", serif;
+}
+
 .weather-forecast-temperatures {
-  font-size: 13px;
+  font-size: 20px;
+  font-family: "Gentium Basic", serif;
+}
+
+.weather-forecast-temperature-max {
+  font-weight: 500;
+}
+
+.weather-forecast-temperature-min {
+  color: rgba(39, 33, 66, 0.4);
 }
 
 .link {
